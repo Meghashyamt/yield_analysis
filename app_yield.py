@@ -46,7 +46,7 @@ def process_file(uploaded_file):
     st.pyplot(fig)
 
     # Create subplots for additional analysis
-    fig, axes = plt.subplots(2, 3, figsize=(18, 6))
+    fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 
     # Pie chart for Distribution of Hybrid
     hybrid_counts = data['Hybrid'].value_counts()
@@ -65,21 +65,21 @@ def process_file(uploaded_file):
     axes[2].set_xlabel('Planting Week')
     axes[2].set_ylabel('Quality')
 
-    # Segregating the data by hybrid
-    hybrid_1 = data[data['Hybrid'] == 1]
-    hybrid_2 = data[data['Hybrid'] == 2]
+    # # Segregating the data by hybrid
+    # hybrid_1 = data[data['Hybrid'] == 1]
+    # hybrid_2 = data[data['Hybrid'] == 2]
 
-    # Line chart for Yield over Planting Week Hybrid 1
-    sns.lineplot(x='Planting Week', y='Yield', data=hybrid_1, ax=axes[1])
-    axes[3].set_title('Yield over Planting Week Hybrid 1')
-    axes[3].set_xlabel('Planting Week')
-    axes[3].set_ylabel('Yield')
+    # # Line chart for Yield over Planting Week Hybrid 1
+    # sns.lineplot(x='Planting Week', y='Yield', data=hybrid_1, ax=axes[1])
+    # axes[3].set_title('Yield over Planting Week Hybrid 1')
+    # axes[3].set_xlabel('Planting Week')
+    # axes[3].set_ylabel('Yield')
 
-    # Line chart for Quality over Planting Week Hybrid 2
-    sns.lineplot(x='Planting Week', y='Quality', data=hybrid_2, ax=axes[2])
-    axes[4].set_title('Quality over Planting Week Hybrid 2')
-    axes[4].set_xlabel('Planting Week')
-    axes[4].set_ylabel('Quality')
+    # # Line chart for Quality over Planting Week Hybrid 2
+    # sns.lineplot(x='Planting Week', y='Quality', data=hybrid_2, ax=axes[2])
+    # axes[4].set_title('Quality over Planting Week Hybrid 2')
+    # axes[4].set_xlabel('Planting Week')
+    # axes[4].set_ylabel('Quality')
     plt.tight_layout()
     st.pyplot(fig)
 
