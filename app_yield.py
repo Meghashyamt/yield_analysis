@@ -71,15 +71,15 @@ def process_file(uploaded_file):
 
     # Line chart for Yield over Planting Week Hybrid 1
     sns.lineplot(x='Planting Week', y='Yield', data=hybrid_1, ax=axes[1])
-    axes[1].set_title('Yield over Planting Week Hybrid 1')
-    axes[1].set_xlabel('Planting Week')
-    axes[1].set_ylabel('Yield')
+    axes[3].set_title('Yield over Planting Week Hybrid 1')
+    axes[3].set_xlabel('Planting Week')
+    axes[3].set_ylabel('Yield')
 
     # Line chart for Quality over Planting Week Hybrid 2
     sns.lineplot(x='Planting Week', y='Quality', data=hybrid_2, ax=axes[2])
-    axes[2].set_title('Quality over Planting Week Hybrid 2')
-    axes[2].set_xlabel('Planting Week')
-    axes[2].set_ylabel('Quality')
+    axes[4].set_title('Quality over Planting Week Hybrid 2')
+    axes[4].set_xlabel('Planting Week')
+    axes[4].set_ylabel('Quality')
     plt.tight_layout()
     st.pyplot(fig)
 
